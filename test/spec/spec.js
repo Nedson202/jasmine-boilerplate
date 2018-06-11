@@ -16,17 +16,17 @@ describe('Addition of multiples', function() {
         expect(result).toBeGreaterThan(30);
     })
 
-    it('should return 45 if input is a string', function() {
+    it('should return error if input is a string', function() {
         let result = app.inputChecker('17djdjd');
         expect(result).toEqual('Please enter a positive number');
     })
 
-    it('should return 45 if input is a string', function() {
+    it('should return error if input is 0', function() {
         let result = app.inputChecker(0);
         expect(result).toEqual('Please enter a number greater than 0');
     })
 
-    it('should return 45 if input is a string', function() {
+    it('should return error if input is a negative ', function() {
         let result = app.inputChecker(-100);
         expect(result).toEqual('Please enter a number greater than 0');
     })
