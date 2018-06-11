@@ -26,6 +26,11 @@ describe('Addition of multiples', function() {
         expect(result).toEqual('Please enter a number greater than 0');
     })
 
+    it('should return 45 if input is a string', function() {
+        let result = app.inputChecker(-100);
+        expect(result).toEqual('Please enter a number greater than 0');
+    })
+
     it('should return error if value is undefined', function() {
         let result = app.inputChecker(undefined);
         expect(result).toEqual('Please enter a positive number');
